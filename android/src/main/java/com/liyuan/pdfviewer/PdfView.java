@@ -31,7 +31,7 @@ public class PdfView extends PDFView implements OnLoadCompleteListener {
         ReactContext reactContext = (ReactContext) this.getContext();
         reactContext.getJSModule(RCTEventEmitter.class).receiveEvent(
                 this.getId(),
-                "loadcomplete",
+                "topChange",
                 event
         );
     }
