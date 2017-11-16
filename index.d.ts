@@ -4,7 +4,7 @@ import * as ReactNative from 'react-native';
 interface Props {
   style?: ReactNative.ViewStyle,
   src?: string,
-  onLoadComplete?: () => void,
+  onLoadEnd?: () => void,
 }
 
 declare class PDFView extends React.Component<Props, any> {}

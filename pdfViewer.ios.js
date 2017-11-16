@@ -16,11 +16,11 @@ const PdfView = props => (
 PdfView.propTypes = {
   ...View.propTypes,
   src: PropTypes.string.isRequired,
-  onLoadComplete: PropTypes.func,
+  onLoadEnd: PropTypes.func,
 }
 
 PdfView.defaultProps = {
-  onLoadComplete: null,
+  onLoadEnd: null,
 }
 
 export default PdfView

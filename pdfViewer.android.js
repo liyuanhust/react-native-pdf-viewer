@@ -6,10 +6,8 @@ const androidPDFViewUriPrefix = 'http://docs.google.com/gview?embedded=true&url=
 
 class PdfView extends Component {
 
-  onLoadComplete = () => {
-    if (this.props.onLoadComplete !== null) {
-      this.props.onLoadComplete()
-    }
+  onLoadEnd = () => {
+    this.props.onLoadEnd && this.props.onLoadEnd()
   }
 
   setNativeProps(nativeProps) {
@@ -32,7 +30,7 @@ class PdfView extends Component {
           scalesPageToFit
           javaScriptEnabled
           domStorageEnabled
-          onLoadEnd={() => this.onLoadComplete()}
+          onLoadEnd={() => this.onLoadEnd()}
           {...this.props}
         />
       )
@@ -40,7 +38,7 @@ class PdfView extends Component {
     return (
       <PdfViewAndroid
         ref={ref => { this.pdfview = ref }}
-        onChange={this.onLoadComplete}
+        onChange={this.onLoadEnd}
         {...this.props}
       />)
   }
@@ -49,11 +47,11 @@ class PdfView extends Component {
 PdfView.propTypes = {
   ...View.propTypes,
   src: PropTypes.string.isRequired,
-  onLoadComplete: PropTypes.func,
+  onLoadEnd: PropTypes.func,
 }
 
 PdfView.defaultProps = {
-  onLoadComplete: null,
+  onLoadEnd: null,
 }
 
 
