@@ -17,7 +17,6 @@ import java.io.File;
  */
 
 public class PdfView extends PDFView implements OnLoadCompleteListener {
-    private int pageNumber = 1;
     private String src;
 
     public PdfView(Context context, AttributeSet set) {
@@ -39,7 +38,6 @@ public class PdfView extends PDFView implements OnLoadCompleteListener {
     public void load() {
         if (src != null) {
             this.fromFile(new File(src))
-                    .defaultPage(pageNumber)
                     .onLoad(this)
                     .load();
         }
