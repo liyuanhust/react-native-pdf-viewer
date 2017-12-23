@@ -18,10 +18,7 @@ On Android, it base on [barteksc/AndroidPdfViewer](https://github.com/barteksc/A
 
 #### iOS
 
-1. In XCode, in the project navigator, right click `Libraries` ➜ `Add Files to [your project's name]`
-2. Go to `node_modules` ➜ `react-native-pdf-viewer` and add `RNPdfViewer.xcodeproj`
-3. In XCode, in the project navigator, select your project. Add `libRNPdfViewer.a` to your project's `Build Phases` ➜ `Link Binary With Libraries`
-4. Run your project (`Cmd+R`)<
+No IOS native code
 
 #### Android
 
